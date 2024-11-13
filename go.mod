@@ -1,4 +1,4 @@
-module github.com/Just-maple/go-autowire
+module github.com/micln/go-autowire
 
 go 1.13
 

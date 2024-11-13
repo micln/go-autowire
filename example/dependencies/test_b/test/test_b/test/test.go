@@ -1,7 +1,7 @@
 package test
 
 import (
-	test2 "github.com/Just-maple/go-autowire/example/dependencies/test_b/test"
+	test2 "github.com/micln/go-autowire/example/dependencies/test_b/test"
 )
 
 // @autowire(set=struct)

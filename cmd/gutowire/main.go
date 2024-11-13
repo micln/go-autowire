@@ -1,7 +1,7 @@
 package main
 
 import (
-	gutowire "github.com/Just-maple/go-autowire"
+	gutowire "github.com/micln/go-autowire"
 	"github.com/spf13/cobra"
 )
 
