@@ -95,6 +95,13 @@ func (sc *autoWireSearcher) writeSets() (err error) {
 		})
 
 		inits := []string{fmt.Sprintf(initTemplateHead, sc.pkg)}
+
+		pkgs := []string{}
+		for _, e := range sc.initElements {
+			pkgs = append(pkgs, `"`+e.pkgPath+`"`)
+		}
+		inits = append(inits, fmt.Sprintf(initTemplateImport, strings.Join(pkgs, "\n")))
+
 		configs := make([]string, 0, len(sc.configElements))
 
 		sort.Slice(sc.configElements, func(i, j int) bool {
