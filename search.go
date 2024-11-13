@@ -231,7 +231,7 @@ func (sc *autoWireSearcher) analysisWireTag(tag, filePath string, decl *tmpDecl,
 	}
 
 	defer func() {
-		log.Printf("wire object collected [ %sSet ] : %s\n", strcase.LowerCamelCase(setName), wireElement.pkg+"."+wireElement.name)
+		log.Printf("wire object collected [ %sSet ] : %s\n", strcase.LowerCamelCase(setName), wireElement.pkgPath+"."+wireElement.name)
 		sc.Lock()
 		if sc.elementMap[setName] == nil {
 			sc.elementMap[setName] = make(map[string]element)
